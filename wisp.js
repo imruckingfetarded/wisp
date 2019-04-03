@@ -1,5 +1,4 @@
 //required packages
-const config = require("./wispconfig.json");
 const Discord = require("discord.js");
 require("dotenv/config");
 var moment = require("moment");
@@ -93,4 +92,4 @@ bot.on("guildCreate", async gData => {
     });
 });
 
-bot.login(config.token);
+bot.login(process.env.token);
