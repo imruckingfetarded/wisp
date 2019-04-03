@@ -2,6 +2,9 @@ const Discord = require("discord.js");
 
 
 module.exports.run = async (bot, message, args, db) => {
+message.delete();
+let tick = "`"
+
     db.collection("guilds").doc(message.guild.id).get().then((q) => {
         if (q.exists) {
             if (q.data().guildOwnerID != message.author.id) {
@@ -17,7 +20,6 @@ module.exports.run = async (bot, message, args, db) => {
                  db.collection('guilds').doc(message.guild.id).update({
                      'prefix' : nPre
                  }).then(() => {
-                     let tick = "`"
                     message.channel.send(`Prefix has been set to ${tick}${nPre}${tick}`);
                  });
                  
