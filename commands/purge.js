@@ -19,5 +19,5 @@ module.exports.run = async (bot, message, args, moment) => {
 
 module.exports.config = {
     name: "purge",
-    aliases: ["p"]
+    aliases: ["pg"]
 }
