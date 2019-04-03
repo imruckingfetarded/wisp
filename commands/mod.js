@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 let FieldValue = require("firebase-admin").firestore.FieldValuel;
 
 module.exports.run = async (bot, message, args, moment, db) => {
-
+//currently looking into making for specific commands
     let reply = new Discord.RichEmbed()
         .setColor("#D6D62A")
         .setAuthor("Admin command", bot.user.avatarURL)
