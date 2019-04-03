@@ -4,7 +4,7 @@ require("dotenv/config");
 var moment = require("moment");
 
 //the bot it's self
-const bot = new Discord.Client({disableEvberyone: true});
+const bot = new Discord.Client({disableEveryone: true});
 
 
 //import settings
