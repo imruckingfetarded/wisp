@@ -1,0 +1,21 @@
+{
+  "name": "wisp",
+  "version": "1.0.0",
+  "description": "a multi purpose bot",
+  "main": "wisp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zach",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "dotenv": "^7.0.0",
+    "firebase": "^5.9.2",
+    "firebase-admin": "^7.2.0",
+    "moment": "^2.24.0",
+    "nodemon": "^1.18.10",
+    "npm": "^6.9.0",
+    "urban": "^0.3.2"
+  }
+}
