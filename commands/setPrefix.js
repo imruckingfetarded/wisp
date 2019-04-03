@@ -1,11 +1,13 @@
 const Discord = require("discord.js");
 
 
-module.exports.run = async (bot, message, args, moment, db) => {
+module.exports.run = async (bot, message, args, db) => {
     db.collection("guilds").doc(message.guild.id).get().then((q) => {
         if (q.exists) {
             if (q.data().guildOwnerID != message.author.id) {
-                message.channel.send("You must be the owner of the server in-order to change the server prefix!");
+
+
+                message.channel.send("You must be the `owner` of the server in-order to change the server prefix!");
                 return;
             } else if(args.length === 0) {
                 message.channel.send("Need a prefix to change!")
@@ -15,7 +17,8 @@ module.exports.run = async (bot, message, args, moment, db) => {
                  db.collection('guilds').doc(message.guild.id).update({
                      'prefix' : nPre
                  }).then(() => {
-                    message.channel.send(`Prefix has been set to ${nPre}`);
+                     let tick = "`"
+                    message.channel.send(`Prefix has been set to ${tick}${nPre}${tick}`);
                  });
                  
              }
