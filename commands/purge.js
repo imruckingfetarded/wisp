@@ -11,13 +11,13 @@ module.exports.run = async (bot, message, args, moment) => {
     } else {
 
     message.channel.bulkDelete(args[0]).then(() => {
-    message.channel.send("✅  `" + `${args[0]}` + "` messages have been purged!").then(msg => msg.delete(2000));
+    message.channel.send("✅  `" + `${args[0]}` + "` messages have been purged!").then(msg => msg.delete(5000));
   });
     }
 
 }
 
 module.exports.config = {
-    name: "say",
-    aliases: ["s"]
+    name: "purge",
+    aliases: ["p"]
 }
