@@ -12,6 +12,8 @@ module.exports.run = async (bot, message, args, moment) => {
             .addField("👎", json.thumbs_down, true)
             .setFooter(`Written by ${json.author}`)
             .setThumbnail("https://i.gyazo.com/609c250a68db4342e8f2a8d242557e93.png");
+
+            message.channel.send(rdef);
         });
     } else {
         let string = args.join(" ");
