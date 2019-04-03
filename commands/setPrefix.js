@@ -15,7 +15,7 @@ module.exports.run = async (bot, message, args, moment, db) => {
                  db.collection('guilds').doc(message.guild.id).update({
                      'prefix' : nPre
                  }).then(() => {
-                    message.channel.send("Prefix has been set to` " + nPre.toString() + "`!");
+                    message.channel.send("Prefix has been set to`\u200b" + nPre.toString() + "`!");
                  });
                  
              }
