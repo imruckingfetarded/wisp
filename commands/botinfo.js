@@ -6,8 +6,8 @@ message.delete();
 
     let binfo = new Discord.RichEmbed()
         .setColor(`${rHex.generate()}`)
-        .setDescription("Bot Info | Wisp")
         .setAuthor("Wisp", "https://i.imgur.com/DbPQs8Z.png")
+        
 
         message.channel.send(binfo);
 
