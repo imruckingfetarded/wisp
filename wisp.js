@@ -77,6 +77,18 @@ bot.on("message", async message => {
    });
 });
 
+
+//creates the eco collection
+bot.on("guildCreate", async eData => {
+    db.collection(members).doc(eData).set({
+        'guild.id' : eData.id,
+        'guildName' : eData.name,
+        'guildOwner' : eData.owner.user.username,
+        'guildOwnerID' : eData.owner.id,
+        'balance' : "$100"
+    })
+});
+
 //db collection creation slots
 bot.on("guildCreate", async gData => {
     db.collection("guilds").doc(gData.id).set({
