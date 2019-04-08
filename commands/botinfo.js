@@ -14,7 +14,7 @@ let seconds = totalSeconds % 60;
     let binfo = new Discord.RichEmbed()
         .setColor(`${rHex.generate()}`)
         .setAuthor("Wisp", "https://i.imgur.com/DbPQs8Z.png")
-        .setDescription(`Wisp has been on for ${days} day(s), ${hours} hour and ${minutes} minutes`)
+        .setFooter(`Wisp has been on for ${days} day(s), ${hours} hour and ${minutes} minutes`)
         .addField("Currently in:", `${bot.guilds.size} servers`, true)
         
 
