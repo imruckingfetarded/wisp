@@ -1,8 +1,11 @@
 const Discord = require("discord.js");
 var rHex = require("random-hex");
 
+
 module.exports.run = async (bot, message, args, moment) => {
-message.delete();
+//need to finish
+
+    message.delete();
 
 let totalSeconds = (bot.uptime / 1000);
 let days = Math.floor(totalSeconds / 86400);
