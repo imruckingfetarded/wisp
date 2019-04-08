@@ -15,6 +15,8 @@ let seconds = totalSeconds % 60;
         .setColor(`${rHex.generate()}`)
         .setAuthor("Wisp", "https://i.imgur.com/DbPQs8Z.png")
         .setDescription(`Wisp has been on for ${days} day(s), ${horus} hour and ${minutes} minutes`)
+        .addField("Currently in:", `${bot.guilds.size} servers`, true)
+        
 
         message.channel.send(binfo);
 
