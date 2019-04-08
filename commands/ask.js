@@ -20,7 +20,7 @@ let replies = ([
 ]);
 
 
-let res = math.floor((Math.random() * replies.length));
+let res = Math.floor((Math.random() * replies.length));
 message.channel.reply(replies[res]);
 
 
